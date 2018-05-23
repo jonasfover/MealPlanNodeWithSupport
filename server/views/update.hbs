@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Meal Plan</title>
+		<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" />
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="/">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="addfood">Add food to db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="update">Update food in db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="burn">Add Exercise</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="chat">Support</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<br>
+					<h2>Update food</h2>
+				 	<div class="field half first">
+					 	<form method="post" action="update" >
+						 <div class="form-group">
+							 <label>Food name</label>
+							 <input class="form-control" placeholder="Enter food name" name="findFoodName">
+						 </div>
+						 <div class="form-group">
+							 <label>Quantity 1 = 100g, 0.5 = 50 g</label>
+							 <input class="form-control"  name="quantity">
+						 </div>
+						 <hr>
+						 <input type="submit" value="Add food" class="btn btn-secondary btn-lg" />
+					 	</form>
+					 <br>
+					 <section class="get">
+						 <div class="">BMR: {{myBMR}}</div>
+						 <div class="">
+							Calories burned lifting: {{wlCal}}
+						 </div>
+						 <div class="">
+							Calories bunred w/ cardio: {{carCal}}
+						 </div>
+						 <div class="">Remaining Calories: {{rCal}}</div>
+						 <div class="">Calories in total: {{totalCalories}}</div>
+						 <div class="">Protein in total: {{totalProtein}}</div>
+						 <div class="">Carbs in total: {{totalCarbs}}</div>
+						 <div class="">Fat in total: {{totalFat}}</div>
+					 </section>
+				 </div>
+				</div>
+				<div class="col-md-6">
+					<div class="field half">
+						<br>
+						{{# each items }}
+							<div>
+								Food name: {{ this.name }}
+								Cals: {{ this.calories }}
+								Protein: {{ this.protein }}
+								Carbs: {{ this.carbs }}
+								Fat: {{ this.fat }}
+								Quantity: {{this.quantity}}
+							 </div>
+						{{/each}}
+					</div>
+				</div>
+		  	</div>
+			</div>
+	</body>
+</html>

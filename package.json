@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "mocha server/**/*.test.js",
-    "test-watch": "nodemon --exec 'npm test'"
+    "test": "mocha **/*.test.js",
+    "start": "node server"
   },
   "engines": {
     "node": "6.2.2"
@@ -14,12 +13,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
     "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "gulp-install": "^1.1.0",
+    "logger": "0.0.1",
+    "moment": "^2.15.1",
+    "mongoose": "^5.1.2",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.6.5",
+    "partials": "^0.1.0",
+    "semantic-ui": "^2.3.1",
     "socket.io": "^1.4.8"
   },
   "devDependencies": {
     "expect": "^1.20.2",
-    "mocha": "^3.0.2",
-    "nodemon": "^1.10.2"
+    "gulp": "^3.9.1",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.17.5",
+    "tap": "^11.1.5"
   }
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Meal Plan</title>
+		<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" />
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="/">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+					<!-- <li class="nav-item active">
+						<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" href="addfood">Add food to db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="update">Update food in db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="burn">Add Exercise</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="chat">Support</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<section>
+						<form method="post" action="contact">
+							<div class="field">
+								<br>
+								<input type="text" name="name" id="name" placeholder="Name"/>
+							</div>
+							<div class="field">
+								<br>
+								<input type="text" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<br>
+								<input type="text" name="subject" id="subject" placeholder="Subject"/>
+							</div>
+							<div class="field">
+								<br>
+								<textarea name="message" id="message" rows="3" placeholder="Message"></textarea>
+							</div>
+							<br>
+
+						</form>
+						<button class="btn btn-danger" type="button">Send Message</button>
+					</section>
+				</div>
+				<div class="col-6">
+					<div class="">
+						<h3>Address</h3>
+						<p>Detkuduliatvide Road 4E<br />
+						København, 2400</p>
+					</div>
+					<section>
+						<h3>Phone</h3>
+						<p>30 48 44 60</p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p>zdyb647@gmail.com</p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

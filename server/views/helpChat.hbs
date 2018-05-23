@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat | ChatApp</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+</head>
+
+<body>
+  <input name="username" type="text" placeholder="name for use"/>
+
+  <ol id="messages"></ol>
+
+  <form id="message-form">
+    <input name="message" type="text" placeholder="Message"/>
+    <button id="btn">Send</button>
+  </form>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery-3.1.0.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script>
+    $('#btn').on('click', () => {
+      $.ajax({
+        method: 'post',
+        url: '/chat',
+        data: jQuery('[name=message]').val(),
+        success: function(data) {
+          $messages.append('<li>' + jQuery('[name=username]').val() + ' : ' + data);
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>

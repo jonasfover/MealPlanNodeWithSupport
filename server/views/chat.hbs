@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+     <meta charset="utf-8">
+    <title>Chat | ChatApp</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" /> -->
+    {{!-- <link rel="stylesheet" type="text/css" href="/Semantic-UI-CSS-master/semantic.min.css"> --}}
+		<link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css" />
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="/">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+					<!-- <li class="nav-item active">
+						<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" href="addfood">Add food to db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="update">Update food in db</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="burn">Add Exercise</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="chat">Support</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <br>
+        <input name="username" type="text" placeholder="name for use"/>
+        <form id="message-form">
+          <input width="480px" height="480px" name="message" type="text" placeholder="Message"/>
+          <button id="btn">Send</button>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <br>
+				<p>Hello, my name is Alex, how can I help you?</p>
+        <ol id="messages"></ol>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery-3.1.0.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/Semantic-UI-CSS-master/semantic.min.js"></script>
+</body>
+</html>
